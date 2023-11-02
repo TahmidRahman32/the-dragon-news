@@ -5,18 +5,20 @@ import { Outlet } from 'react-router-dom';
 import { Col, Container, Row } from 'react-bootstrap';
 import LeftNav from '../pages/shared/LeftNav/LeftNav';
 import RightVav from '../pages/shared/rightNav/RightVav';
+import NavigationBur from '../pages/shared/NavigationBur/NavigationBur';
 
 const LayOut = () => {
    return (
       <div>
          <Header></Header>
+         <NavigationBur></NavigationBur>
          <Container>
             <Row>
                <Col lg={3}>
                  <LeftNav></LeftNav>
                </Col>
                <Col lg={6}>
-                  <h1>main content is cumming....</h1>
+                  <Outlet></Outlet>
                </Col>
 
                <Col lg={3}>

@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, ListGroup } from 'react-bootstrap';
 import { FaFacebook, FaGithub, FaGoogle, FaInstagram, FaTwitter,} from "react-icons/fa";
 import QZone from '../QZone/QZone';
 import bg from '../../../assets/bg.png'
+import { AuthContext } from '../../../Firebase/AuthProvider/AuthProvide';
+
+ 
 
 const RightVav = () => {
+   const AuthProvider = useContext(AuthContext);
+   
+   const handleGoogleSubmit = () =>{
+      
+   }
    return (
       <div>
          <h3>Login With</h3>
-         <Button className="mb-2" variant="outline-primary">
+         <Button onSubmit={handleGoogleSubmit} className="mb-2" variant="outline-primary">
             <FaGoogle />
             Login with Google
          </Button>
